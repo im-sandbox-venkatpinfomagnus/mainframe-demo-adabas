@@ -153,3 +153,5 @@ sequenceDiagram
 ### Reusable prompts
 **Prompt**: /cobol-2-java into the folder named  banking-java
 
+## Setup Tests
+**Prompt**: "@workspace /setupTests for main cobol programs ACCOUNT-READ.cbl and ACCOUNT-UPDATE.cbl including test data and instructions."
