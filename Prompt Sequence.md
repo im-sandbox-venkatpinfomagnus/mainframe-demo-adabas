@@ -150,4 +150,6 @@ sequenceDiagram
 
 **Prompt**: "Generate some focused prompts for modernizing this COBOL app to Java.."
 
+### Reusable prompts
+**Prompt**: /cobol-2-java into the folder named  banking-java
 

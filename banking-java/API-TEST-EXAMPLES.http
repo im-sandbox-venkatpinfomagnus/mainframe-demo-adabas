@@ -1,0 +1,104 @@
+### API Test Examples - Postman/cURL
+
+## 1. Read Account (Success)
+GET http://localhost:8080/api/accounts/1001234567
+
+Expected: 200 OK with account details
+
+---
+
+## 2. Read Account (Not Found)
+GET http://localhost:8080/api/accounts/9999999999
+
+Expected: 404 NOT_FOUND
+
+---
+
+## 3. Deposit Transaction
+POST http://localhost:8080/api/accounts/1001234567/transactions
+Content-Type: application/json
+
+{
+  "transactionType": "DEPOSIT",
+  "amount": 5000.00
+}
+
+Expected: 200 OK, balance increases from $15,250.75 to $20,250.75
+
+---
+
+## 4. Withdrawal Transaction
+POST http://localhost:8080/api/accounts/1001234570/transactions
+Content-Type: application/json
+
+{
+  "transactionType": "WITHDRAWAL",
+  "amount": 2000.00
+}
+
+Expected: 200 OK, balance decreases from $8,750.50 to $6,750.50
+
+---
+
+## 5. Insufficient Funds
+POST http://localhost:8080/api/accounts/1001234578/transactions
+Content-Type: application/json
+
+{
+  "transactionType": "WITHDRAWAL",
+  "amount": 15000.00
+}
+
+Expected: 400 BAD_REQUEST (available balance: $9,850.25)
+
+---
+
+## 6. Balance Adjustment
+POST http://localhost:8080/api/accounts/1001234580/transactions
+Content-Type: application/json
+
+{
+  "transactionType": "ADJUSTMENT",
+  "amount": 15000.00
+}
+
+Expected: 200 OK, balance set to $15,000.00
+
+---
+
+## 7. Validation Error (Negative Amount)
+POST http://localhost:8080/api/accounts/1001234567/transactions
+Content-Type: application/json
+
+{
+  "transactionType": "DEPOSIT",
+  "amount": -1000.00
+}
+
+Expected: 400 BAD_REQUEST with validation error
+
+---
+
+## 8. Validation Error (Missing Fields)
+POST http://localhost:8080/api/accounts/1001234567/transactions
+Content-Type: application/json
+
+{
+  "transactionType": "DEPOSIT"
+}
+
+Expected: 400 BAD_REQUEST (amount is required)
+
+---
+
+## 9. Health Check
+GET http://localhost:8080/actuator/health
+
+Expected: 200 OK with status UP
+
+---
+
+## 10. API Documentation
+GET http://localhost:8080/swagger-ui.html
+
+Opens interactive Swagger UI for testing all endpoints
