@@ -24,7 +24,7 @@ Step 5: Once all errors are resolved, run the program to verify functionality
 
 **Prompt**: "can you create a sequence diagram of the app showing the data flow of the app. Please create this in mermaid format so that I can render this in a markdown file."
 
-<div style="max-height: 600px; overflow-y: auto; border: 1px solid #ddd; padding: 10px;">
+<div style="max-height: 300px; overflow-y: auto; border: 1px solid #ddd; padding: 10px;">
 
 ```mermaid
 sequenceDiagram
