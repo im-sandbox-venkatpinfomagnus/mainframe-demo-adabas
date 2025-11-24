@@ -20,11 +20,11 @@ Step 5: Once all errors are resolved, run the program to verify functionality
 **Step 6**: Finally you will be able to fix the errors and run the program successfully
 ![Step 6](./images/prompt-sequence-step6.png)
 
----
-
 ## Sequence Diagram
 
 **Prompt**: "can you create a sequence diagram of the app showing the data flow of the app. Please create this in mermaid format so that I can render this in a markdown file."
+
+<div style="max-height: 600px; overflow-y: auto; border: 1px solid #ddd; padding: 10px;">
 
 ```mermaid
 sequenceDiagram
@@ -141,4 +141,13 @@ sequenceDiagram
         ACCOUNT-UPDATE->>User: Program Terminates
     end
 ```
+
+</div>
+
+<br />
+
+## Modernization
+
+**Prompt**: "Generate some focused prompts for modernizing this COBOL app to Java.."
+
 
