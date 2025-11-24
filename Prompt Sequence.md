@@ -1,28 +1,46 @@
-**Step 1**
-- open chat window and enter your prompt as in below screenshot
+# COBOL Banking App - Prompt Sequence Guide
+
+## Initial Development & Debugging
+
+### Step 1: Start Development
+**Prompt:**
+```
+Open chat window and start coding with GitHub Copilot
+```
 ![Step 1](./images/prompt-sequence-step1.png)
-**Step 2**
 
+### Step 2: Code Generation
 ![Step 2](./images/prompt-sequence-step2.png)
-**Step 3**
 
+### Step 3: Compile and Review
 ![Step 3](./images/prompt-sequence-step3.png)
 
-**Step 4** copy and paste the error in chat window
+### Step 4: Debug Compilation Errors
+**Prompt:**
+```
+Copy and paste the compilation error in chat window
+```
 ![Step 4](./images/prompt-sequence-step4.png)
 
-**Step 4.1** review the suggestions and apply the changes and move to next error until all errors are resolved
+### Step 4.1: Apply Fixes Iteratively
+Review the suggestions and apply the changes. Move to next error until all errors are resolved.
 
-Step 5: Once all errors are resolved, run the program to verify functionality
-
+### Step 5: Verify Functionality
+Once all errors are resolved, run the program to verify functionality.
 ![Step 5](./images/prompt-sequence-step5.png)
 
-**Step 6**: Finally you will be able to fix the errors and run the program successfully
+### Step 6: Final Testing
+Successfully fix all errors and run the program.
 ![Step 6](./images/prompt-sequence-step6.png)
 
-## Sequence Diagram
+---
 
-**Prompt**: "can you create a sequence diagram of the app showing the data flow of the app. Please create this in mermaid format so that I can render this in a markdown file."
+## Sequence Diagram Generation
+
+**Prompt:**
+```
+can you create a sequence diagram of the app showing the data flow of the app. Please create this in mermaid format so that I can render this in a markdown file.
+```
 
 <div style="max-height: 300px; overflow-y: auto; border: 1px solid #ddd; padding: 10px;">
 
@@ -146,12 +164,90 @@ sequenceDiagram
 
 <br />
 
-## Modernization
+---
 
-**Prompt**: "Generate some focused prompts for modernizing this COBOL app to Java.."
+## Modernization Prompts
 
-### Reusable prompts
-**Prompt**: /cobol-2-java into the folder named  banking-java
+### Generate Modernization Strategy
+**Prompt:**
+```
+Generate some focused prompts for modernizing this COBOL app to Java.
+```
 
-## Setup Tests
-**Prompt**: "@workspace /setupTests for main cobol programs ACCOUNT-READ.cbl and ACCOUNT-UPDATE.cbl including test data and instructions."
+### Execute Modernization (Spring Boot)
+**Prompt:**
+```
+/cobol-2-java into the folder named banking-java
+```
+
+This uses the reusable prompt template from `.github/prompts/cobol-2-java.prompt.md`
+
+---
+
+## Testing & Validation
+
+### Setup COBOL Unit Tests
+**Prompt:**
+```
+@workspace /setupTests for main cobol programs ACCOUNT-READ.cbl and ACCOUNT-UPDATE.cbl including test data and instructions.
+```
+
+### Create Test Runner Script
+**Prompt:**
+```
+Create a shell script to compile and run all COBOL tests in the tests/cobol folder.
+```
+
+### Generate Test Plan for Business Validation
+**Prompt:**
+```
+@workspace The current Cobol app has no tests. Can you please create a test plan of current business logic that I can use to validate with business stakeholders about the current implementation.
+
+Later I would like to use this test plan to create unit and integration tests in a node.js app. I am in the middle of transforming the current Cobol app to a node.js app.
+
+The test plan should include the following:
+1. Test Case ID
+2. Test Case Description
+3. Pre-conditions
+4. Test Steps
+5. Expected Result
+6. Actual Result
+7. Status (Pass/Fail)
+8. Comments
+
+Please create the test plan in a markdown file in table format. The test plan should cover all the business logic in the current Cobol app.
+```
+
+---
+
+## Quick Reference - Copy/Paste Ready Prompts
+
+### Debugging
+```
+Fix the compilation errors in ACCOUNT-READ.cbl
+```
+
+### Documentation
+```
+Create comprehensive documentation for the COBOL banking application including architecture, data flow, and API specifications
+```
+
+### Code Analysis
+```
+Analyze the business logic in ACCOUNT-UPDATE.cbl and explain the transaction processing flow
+```
+
+### Modernization
+```
+/cobol-2-java into the folder named banking-java
+```
+
+### Testing
+```
+@workspace /setupTests for main cobol programs
+```
+
+### Test Plan
+```
+@workspace Create a comprehensive test plan covering all business logic in the COBOL application
+```
