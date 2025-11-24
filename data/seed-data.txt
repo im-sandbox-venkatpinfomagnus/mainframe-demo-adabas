@@ -1,0 +1,35 @@
+================================================================
+CUSTOMER ACCOUNTS - SEED DATA (20 Records)
+================================================================
+
+Account#    Customer Name              Account Type      Balance       Last Txn Date
+----------  -------------------------  ---------------   ------------  -------------
+1001234567  JAMES ANDERSON             CHECKING          15250.75      20251120
+1001234568  MARIA GARCIA               SAVINGS           45000.00      20251119
+1001234569  ROBERT JOHNSON             FIXED-DEPOSIT     100000.00     20251015
+1001234570  JENNIFER WILLIAMS          CHECKING          8750.50       20251121
+1001234571  MICHAEL BROWN              SAVINGS           32500.25      20251118
+1001234572  LINDA DAVIS                CHECKING          12300.00      20251120
+1001234573  DAVID MILLER               FIXED-DEPOSIT     75000.00      20251101
+1001234574  SUSAN WILSON               SAVINGS           58900.75      20251117
+1001234575  WILLIAM MOORE              CHECKING          22450.30      20251122
+1001234576  PATRICIA TAYLOR            SAVINGS           41200.00      20251116
+1001234577  RICHARD ANDERSON           FIXED-DEPOSIT     150000.00     20251020
+1001234578  MARY THOMAS                CHECKING          9850.25       20251121
+1001234579  CHARLES JACKSON            SAVINGS           67300.50      20251115
+1001234580  BARBARA WHITE              CHECKING          14275.80      20251120
+1001234581  JOSEPH HARRIS              FIXED-DEPOSIT     200000.00     20251105
+1001234582  SARAH MARTIN               SAVINGS           38750.00      20251119
+1001234583  THOMAS THOMPSON            CHECKING          18920.45      20251122
+1001234584  NANCY GARCIA               SAVINGS           52100.75      20251114
+1001234585  DANIEL LEE                 FIXED-DEPOSIT     125000.00     20251110
+1001234586  KAREN ROBINSON             CHECKING          11680.90      20251121
+
+================================================================
+Account Type Distribution:
+- CHECKING: 8 accounts
+- SAVINGS: 7 accounts  
+- FIXED-DEPOSIT: 5 accounts
+
+Total Balance: $1,091,227.20
+================================================================

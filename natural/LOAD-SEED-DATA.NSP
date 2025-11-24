@@ -1,0 +1,238 @@
+* ================================================================
+* PROGRAM: LOAD-SEED-DATA
+* PURPOSE: Load seed data into CUSTOMER-ACCOUNTS Adabas file
+* ================================================================
+DEFINE DATA LOCAL
+01 #ACCOUNT-NUMBER    (N10)
+01 #CUSTOMER-NAME     (A50)
+01 #ACCOUNT-TYPE      (A15)
+01 #BALANCE           (N11.2)
+01 #LAST-TXN-DATE     (N8)
+01 #COUNTER           (N3)
+END-DEFINE
+*
+INIT #COUNTER
+*
+* ================================================================
+* Load Record 1
+* ================================================================
+MOVE 1001234567 TO #ACCOUNT-NUMBER
+MOVE 'JAMES ANDERSON' TO #CUSTOMER-NAME
+MOVE 'CHECKING' TO #ACCOUNT-TYPE
+MOVE 15250.75 TO #BALANCE
+MOVE 20251120 TO #LAST-TXN-DATE
+PERFORM STORE-RECORD
+*
+* ================================================================
+* Load Record 2
+* ================================================================
+MOVE 1001234568 TO #ACCOUNT-NUMBER
+MOVE 'MARIA GARCIA' TO #CUSTOMER-NAME
+MOVE 'SAVINGS' TO #ACCOUNT-TYPE
+MOVE 45000.00 TO #BALANCE
+MOVE 20251119 TO #LAST-TXN-DATE
+PERFORM STORE-RECORD
+*
+* ================================================================
+* Load Record 3
+* ================================================================
+MOVE 1001234569 TO #ACCOUNT-NUMBER
+MOVE 'ROBERT JOHNSON' TO #CUSTOMER-NAME
+MOVE 'FIXED-DEPOSIT' TO #ACCOUNT-TYPE
+MOVE 100000.00 TO #BALANCE
+MOVE 20251015 TO #LAST-TXN-DATE
+PERFORM STORE-RECORD
+*
+* ================================================================
+* Load Record 4
+* ================================================================
+MOVE 1001234570 TO #ACCOUNT-NUMBER
+MOVE 'JENNIFER WILLIAMS' TO #CUSTOMER-NAME
+MOVE 'CHECKING' TO #ACCOUNT-TYPE
+MOVE 8750.50 TO #BALANCE
+MOVE 20251121 TO #LAST-TXN-DATE
+PERFORM STORE-RECORD
+*
+* ================================================================
+* Load Record 5
+* ================================================================
+MOVE 1001234571 TO #ACCOUNT-NUMBER
+MOVE 'MICHAEL BROWN' TO #CUSTOMER-NAME
+MOVE 'SAVINGS' TO #ACCOUNT-TYPE
+MOVE 32500.25 TO #BALANCE
+MOVE 20251118 TO #LAST-TXN-DATE
+PERFORM STORE-RECORD
+*
+* ================================================================
+* Load Record 6
+* ================================================================
+MOVE 1001234572 TO #ACCOUNT-NUMBER
+MOVE 'LINDA DAVIS' TO #CUSTOMER-NAME
+MOVE 'CHECKING' TO #ACCOUNT-TYPE
+MOVE 12300.00 TO #BALANCE
+MOVE 20251120 TO #LAST-TXN-DATE
+PERFORM STORE-RECORD
+*
+* ================================================================
+* Load Record 7
+* ================================================================
+MOVE 1001234573 TO #ACCOUNT-NUMBER
+MOVE 'DAVID MILLER' TO #CUSTOMER-NAME
+MOVE 'FIXED-DEPOSIT' TO #ACCOUNT-TYPE
+MOVE 75000.00 TO #BALANCE
+MOVE 20251101 TO #LAST-TXN-DATE
+PERFORM STORE-RECORD
+*
+* ================================================================
+* Load Record 8
+* ================================================================
+MOVE 1001234574 TO #ACCOUNT-NUMBER
+MOVE 'SUSAN WILSON' TO #CUSTOMER-NAME
+MOVE 'SAVINGS' TO #ACCOUNT-TYPE
+MOVE 58900.75 TO #BALANCE
+MOVE 20251117 TO #LAST-TXN-DATE
+PERFORM STORE-RECORD
+*
+* ================================================================
+* Load Record 9
+* ================================================================
+MOVE 1001234575 TO #ACCOUNT-NUMBER
+MOVE 'WILLIAM MOORE' TO #CUSTOMER-NAME
+MOVE 'CHECKING' TO #ACCOUNT-TYPE
+MOVE 22450.30 TO #BALANCE
+MOVE 20251122 TO #LAST-TXN-DATE
+PERFORM STORE-RECORD
+*
+* ================================================================
+* Load Record 10
+* ================================================================
+MOVE 1001234576 TO #ACCOUNT-NUMBER
+MOVE 'PATRICIA TAYLOR' TO #CUSTOMER-NAME
+MOVE 'SAVINGS' TO #ACCOUNT-TYPE
+MOVE 41200.00 TO #BALANCE
+MOVE 20251116 TO #LAST-TXN-DATE
+PERFORM STORE-RECORD
+*
+* ================================================================
+* Load Record 11
+* ================================================================
+MOVE 1001234577 TO #ACCOUNT-NUMBER
+MOVE 'RICHARD ANDERSON' TO #CUSTOMER-NAME
+MOVE 'FIXED-DEPOSIT' TO #ACCOUNT-TYPE
+MOVE 150000.00 TO #BALANCE
+MOVE 20251020 TO #LAST-TXN-DATE
+PERFORM STORE-RECORD
+*
+* ================================================================
+* Load Record 12
+* ================================================================
+MOVE 1001234578 TO #ACCOUNT-NUMBER
+MOVE 'MARY THOMAS' TO #CUSTOMER-NAME
+MOVE 'CHECKING' TO #ACCOUNT-TYPE
+MOVE 9850.25 TO #BALANCE
+MOVE 20251121 TO #LAST-TXN-DATE
+PERFORM STORE-RECORD
+*
+* ================================================================
+* Load Record 13
+* ================================================================
+MOVE 1001234579 TO #ACCOUNT-NUMBER
+MOVE 'CHARLES JACKSON' TO #CUSTOMER-NAME
+MOVE 'SAVINGS' TO #ACCOUNT-TYPE
+MOVE 67300.50 TO #BALANCE
+MOVE 20251115 TO #LAST-TXN-DATE
+PERFORM STORE-RECORD
+*
+* ================================================================
+* Load Record 14
+* ================================================================
+MOVE 1001234580 TO #ACCOUNT-NUMBER
+MOVE 'BARBARA WHITE' TO #CUSTOMER-NAME
+MOVE 'CHECKING' TO #ACCOUNT-TYPE
+MOVE 14275.80 TO #BALANCE
+MOVE 20251120 TO #LAST-TXN-DATE
+PERFORM STORE-RECORD
+*
+* ================================================================
+* Load Record 15
+* ================================================================
+MOVE 1001234581 TO #ACCOUNT-NUMBER
+MOVE 'JOSEPH HARRIS' TO #CUSTOMER-NAME
+MOVE 'FIXED-DEPOSIT' TO #ACCOUNT-TYPE
+MOVE 200000.00 TO #BALANCE
+MOVE 20251105 TO #LAST-TXN-DATE
+PERFORM STORE-RECORD
+*
+* ================================================================
+* Load Record 16
+* ================================================================
+MOVE 1001234582 TO #ACCOUNT-NUMBER
+MOVE 'SARAH MARTIN' TO #CUSTOMER-NAME
+MOVE 'SAVINGS' TO #ACCOUNT-TYPE
+MOVE 38750.00 TO #BALANCE
+MOVE 20251119 TO #LAST-TXN-DATE
+PERFORM STORE-RECORD
+*
+* ================================================================
+* Load Record 17
+* ================================================================
+MOVE 1001234583 TO #ACCOUNT-NUMBER
+MOVE 'THOMAS THOMPSON' TO #CUSTOMER-NAME
+MOVE 'CHECKING' TO #ACCOUNT-TYPE
+MOVE 18920.45 TO #BALANCE
+MOVE 20251122 TO #LAST-TXN-DATE
+PERFORM STORE-RECORD
+*
+* ================================================================
+* Load Record 18
+* ================================================================
+MOVE 1001234584 TO #ACCOUNT-NUMBER
+MOVE 'NANCY GARCIA' TO #CUSTOMER-NAME
+MOVE 'SAVINGS' TO #ACCOUNT-TYPE
+MOVE 52100.75 TO #BALANCE
+MOVE 20251114 TO #LAST-TXN-DATE
+PERFORM STORE-RECORD
+*
+* ================================================================
+* Load Record 19
+* ================================================================
+MOVE 1001234585 TO #ACCOUNT-NUMBER
+MOVE 'DANIEL LEE' TO #CUSTOMER-NAME
+MOVE 'FIXED-DEPOSIT' TO #ACCOUNT-TYPE
+MOVE 125000.00 TO #BALANCE
+MOVE 20251110 TO #LAST-TXN-DATE
+PERFORM STORE-RECORD
+*
+* ================================================================
+* Load Record 20
+* ================================================================
+MOVE 1001234586 TO #ACCOUNT-NUMBER
+MOVE 'KAREN ROBINSON' TO #CUSTOMER-NAME
+MOVE 'CHECKING' TO #ACCOUNT-TYPE
+MOVE 11680.90 TO #BALANCE
+MOVE 20251121 TO #LAST-TXN-DATE
+PERFORM STORE-RECORD
+*
+WRITE '=' REPEAT
+WRITE 'SEED DATA LOAD COMPLETE'
+WRITE 'Total Records Loaded:' #COUNTER
+WRITE '=' REPEAT
+*
+END
+*
+* ================================================================
+* SUBROUTINE: Store individual record
+* ================================================================
+DEFINE SUBROUTINE STORE-RECORD
+  STORE CUSTOMER-ACCOUNTS
+    ACCOUNT-NUMBER  = #ACCOUNT-NUMBER
+    CUSTOMER-NAME   = #CUSTOMER-NAME
+    ACCOUNT-TYPE    = #ACCOUNT-TYPE
+    BALANCE         = #BALANCE
+    LAST-TXN-DATE   = #LAST-TXN-DATE
+  END-STORE
+  ADD 1 TO #COUNTER
+  WRITE 'Record' #COUNTER 'loaded: Account' #ACCOUNT-NUMBER
+END-SUBROUTINE
+*
+END

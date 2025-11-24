@@ -1,0 +1,22 @@
+* ================================================================
+* ADABAS FILE DEFINITION TABLE (FDT)
+* File: CUSTOMER-ACCOUNTS
+* Description: Customer Account Management System
+* ================================================================
+
+* Field Definitions
+* Level  Field Name         Format  Length  Options
+* -----  ----------------   ------  ------  -------
+
+01      ACCOUNT-NUMBER      N       10      DE,UQ
+01      CUSTOMER-NAME       A       50      DE
+01      ACCOUNT-TYPE        A       15      DE
+01      BALANCE             P       11,2    DE
+01      LAST-TXN-DATE       D       8       DE
+
+* Field Descriptions:
+* ACCOUNT-NUMBER  - Unique account identifier (Descriptor, Unique)
+* CUSTOMER-NAME   - Customer full name (Descriptor)
+* ACCOUNT-TYPE    - Type: SAVINGS, CHECKING, or FIXED-DEPOSIT
+* BALANCE         - Account balance (Packed Decimal 11.2)
+* LAST-TXN-DATE   - Last transaction date (YYYYMMDD format)
