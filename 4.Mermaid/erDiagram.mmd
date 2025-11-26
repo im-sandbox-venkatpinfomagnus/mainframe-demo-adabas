@@ -1,0 +1,52 @@
+erDiagram
+    CUSTOMERS {
+        string CustomerID
+        string CompanyName
+        string ContactName
+        string ContactTitle
+        string Address
+        string City
+        string Region
+        string PostalCode
+        string Country
+        string Phone
+        string Fax
+    }
+    ORDERS {
+        string OrderID
+        string CustomerID
+        string EmployeeID
+        date OrderDate
+        date RequiredDate
+        date ShippedDate
+        string ShipVia
+        float Freight
+        string ShipName
+        string ShipAddress
+        string ShipCity
+        string ShipRegion
+        string ShipPostalCode
+        string ShipCountry
+    }
+    ORDER_DETAILS {
+        string OrderID
+        string ProductID
+        float UnitPrice
+        int Quantity
+        float Discount
+    }
+    PRODUCTS {
+        string ProductID
+        string ProductName
+        string SupplierID
+        string CategoryID
+        string QuantityPerUnit
+        float UnitPrice
+        int UnitsInStock
+        int UnitsOnOrder
+        int ReorderLevel
+        bool Discontinued
+    }
+    CUSTOMERS ||--o{ ORDERS : places
+    ORDERS ||--o{ ORDER_DETAILS : contains
+    PRODUCTS ||--o{ ORDER_DETAILS : includes

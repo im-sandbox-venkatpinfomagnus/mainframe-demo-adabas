@@ -1,0 +1,1 @@
+- Translate this JavaScript code to Python, maintaining the same functionality and structure into Translate folder with translated_cities.py

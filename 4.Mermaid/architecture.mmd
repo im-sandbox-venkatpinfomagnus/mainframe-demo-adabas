@@ -1,0 +1,36 @@
+graph TD
+  root["GHCP-Training (Root)"]
+  subgraph Feature_Demos
+    code_completion["1.CodeCompletion<br>Auto-completion (JS, TF, Python)"]
+    inline_chat["2.InlineChat<br>Inline chat scenarios"]
+    copilot_chat["3.Copilot Chat<br>Features, AgentMode, Translate, Vision"]
+    documentation["4.Documentation<br>Auto-documentation, city utilities"]
+    chat_commands["5.Chat-Commands<br>Slash commands, chat reference"]
+    code_metrics["6.CodeMetrics-Refactor<br>Code metrics, refactoring"]
+    commit_messages["7.CommitMessages<br>Commit message demos"]
+    code_review["8.CodeReview<br>ChangeSet, Inline review"]
+    copilot_instructions["9.Copilot-instructions<br>Copilot usage instructions"]
+    mermaid_dir["11.Mermaid<br>Diagram generation"]
+    debugging["12.Debugging<br>Buggy calculator"]
+    translate["Translate<br>Translation demos"]
+  end
+  copilot_md[".github/copilot-instructions.md<br>Development guidelines"]
+  readme_md["README.md<br>Training curriculum"]
+  docs_md["Docs_Github_useful.md<br>Reference docs"]
+
+  root --> Feature_Demos
+  root --> copilot_md
+  root --> readme_md
+  root --> docs_md
+  Feature_Demos --> code_completion
+  Feature_Demos --> inline_chat
+  Feature_Demos --> copilot_chat
+  Feature_Demos --> documentation
+  Feature_Demos --> chat_commands
+  Feature_Demos --> code_metrics
+  Feature_Demos --> commit_messages
+  Feature_Demos --> code_review
+  Feature_Demos --> copilot_instructions
+  Feature_Demos --> mermaid_dir
+  Feature_Demos --> debugging
+  Feature_Demos --> translate

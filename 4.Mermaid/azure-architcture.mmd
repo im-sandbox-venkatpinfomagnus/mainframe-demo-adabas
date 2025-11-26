@@ -1,0 +1,22 @@
+graph TD
+  user["User"]
+  browser["Web Browser"]
+  azure_dns["Azure DNS"]
+  azure_frontdoor["Azure Front Door"]
+  azure_appsvc["Azure App Service<br>(Flask Python App)"]
+  azure_blob["Azure Blob Storage"]
+  azure_sql["Azure SQL Database"]
+  azure_monitor["Azure Monitor"]
+  azure_keyvault["Azure Key Vault"]
+  azure_ad["Azure Active Directory"]
+
+  user --> browser
+  browser --> azure_dns
+  azure_dns --> azure_frontdoor
+  azure_frontdoor --> azure_appsvc
+  azure_appsvc --> azure_blob
+  azure_appsvc --> azure_sql
+  azure_appsvc --> azure_keyvault
+  azure_appsvc --> azure_monitor
+  user --> azure_ad
+  azure_appsvc --> azure_ad
